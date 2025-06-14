@@ -1,10 +1,12 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 import {LoginPage} from '../pages/LoginPage.js';
-import { HomePage } from '../pages/HomePage.js';
+import {HomePage} from '../pages/HomePage.js';
+
+
 
 test('Login', async ({ page }) => {
-    test.setTimeout(80000); // Set a timeout of 80 seconds for this test
+    test.setTimeout(10000); // Set timeout to 10 seconds
     const loginPage = new LoginPage(page);
     
     await loginPage.navigateToLogin();
